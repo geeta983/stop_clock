@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>STOP WATCH</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style type="text/css">
+    	
+    	 .di{
+    	 	position: relative;
+    	 	top:150px;
+    	 	align-items: center;
+    	 	text-align: center;
+    	 	flex-direction: column;
+    	 	justify-content: center;
+    	 	height: 100vh;
+    	 }
+
+    	 .stopwatch{
+    	 	font-size: 100px;
+    	 	text-align: center;
+    	 	font-family: monospace;
+    	 }
+    	 @media screen and (max-width: 780px) {
+		body{
+			align-items: center;
+
+			font-size: 40px;
+			display: inline-block;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		.di,.stopwatch{
+			position: relative;
+			top:10px;
+			align-items: center;
+			font-size: 60px;
+			display: inline-block;
+		}}
+		.laps{
+			font-size: 30px;
+		}
+
+    </style>
+</head>
+<body style="background-image:linear-gradient(white,grey);">
+<h2 class="black-text center">stop clock</h2>
+<div class="di">
+
+  <div class="container">
+  	  <div class="btn" onclick="start()">Start</div>
+  	  <div class="btn" onclick="pause()">Pause</div>
+  	  <div class="btn" onclick="stop()">Stop</div>
+  	  <div class="btn" onclick="restart()">restart</div>
+  	  <div class="btn" onclick="lap()">lap</div>
+  	  <div class="btn" onclick="resetlaps()">Reset laps</div>
+  </div>
+  <div class="stopwatch">00:00:00</div>
+  <div class="laps"></div>
+<script type="text/javascript" src="1.js">
+	
+</script>
+</div>
+</body>
+</html>
