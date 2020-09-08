@@ -1,6 +1,7 @@
 
  	 var ms=0 ,s=0,m=0;
  	 var timer;
+ 	 var k=0;
  	 var sw=document.querySelector('.stopwatch');
        var lc=document.querySelector('.laps');
 function start(){
@@ -47,12 +48,21 @@ function restart()
 }
 function lap()
 {
+	k++;
 	if(timer)
 	{
 		var li=document.createElement('li');
 		li.innerText=(m<10 ? "0"+m:m)+":"+(s<10 ? "0"+s:s)+":"+(ms<10 ? "0"+ms:ms);
 		lc.appendChild(li);
 	}
+	if(k==5)
+	{
+		alert("less than 5 laps can be displayed");
+		resetlaps();
+		k=0;
+	}
+		 
+
 }
 function resetlaps()
 {
